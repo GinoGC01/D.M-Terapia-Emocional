@@ -1,0 +1,78 @@
+---
+
+---
+<footer>
+    <div class="datos-content">
+        <h3>Daniela Montali</h3>
+        <h3>Terapeuta emocional</h3> 
+        <h3>Nro tel. +54 11 3229-6835</h3>
+        <h3>Correo electrónico: danielaMontali_TEV@gmail.com</h3>
+    </div>
+    <h4>© copyright | Todos los derechos reservados</h4>
+</footer>
+
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: constantia,'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+    }
+
+    :root{
+        --blanco: #f5f8fe;
+        --blanco02: #f5f8fe93;
+        --celeste: #00a9d9;
+        --rojo:#ff6761;
+        --rojo-01: #ad2d28;
+        --rojo-02: #811410;
+        --rojo-03: #c4413c;
+        --celeste-claro: #b4d2db;
+        --celeste-claro-01: #dae6ff;
+        --celeste-gris-oscuro: #70888f;
+        --celeste-gris-oscuro-01: #646a6b;
+        --celeste-gris-oscuro-02: #34393a;
+    }
+
+    footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        align-items: center;
+        gap: 1em;
+        margin-top: 1.5em;
+    }
+
+    h4{
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        background-color: var(--celeste-claro);
+    }
+
+    .datos-content{
+        display: flex;
+        gap: 1em;
+    }
+
+    h3, h4{
+        font-size: 1.2em;
+        color: var(--celeste-gris-oscuro-02);
+    }
+
+    @media only screen and (max-width: 600px){
+
+        footer{
+            padding: 0;
+        }
+
+        .datos-content{
+            display: none;
+        }
+        
+
+    }
+</style>

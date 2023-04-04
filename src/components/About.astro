@@ -1,0 +1,298 @@
+---
+
+---
+
+<section id="about">
+    <div class="left">
+        <div class="profile-picture-C1">
+            <img src="/public/images/undraw_female_avatar_efig.svg" alt="profile-image">
+            <div class="text-content">
+                <h3>Daniela Montali</h3>
+                <h2>Terapeuta Emocional</h2>
+                <img src="/public/images/img default.jpg" alt="">
+            </div>
+        </div>
+        <span></span>
+        <div class="text-description-C3">
+            <p>Soy una profesional altamente capacitada, con
+                una Diplomatura  en Psicología de la 
+                Universidad de José C. Paz y una especialización
+                en Terapias Emocioanles en Wesleyan University, 
+                Estados Unidos. Además, he seguido diversos 
+                cursos de formación en terapia emocional y 
+                otras terapias complementarias, 
+                lo que me permite ofrecer un enfoque único 
+                y efectivo en mi trabajo.</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="text-description-C2">
+            <p> Psicóloga social, Recreadora grupal,
+                Terapeuta emocional y acompañante Terapeutico
+                con más de 3 años de experiencia en el campo
+                de la terapia. Mi enfoque se centra en la terapia 
+                emocional y el acompañamiento terapéutico, y
+                siempre me esfuerzo por brindar una atención 
+                personalizada y enfocada en el bienestar 
+                emocional de mis pacientes.</p>
+        </div>
+        <div class="img-C4">
+            <h2>Terapia Emocional <span>virtual</span> </h2>
+            <img src="/public/images/work temporal.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: constantia,'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+    }
+
+    :root{
+        --blanco: #f5f8fe;
+        --celeste: #00a9d9;
+        --rojo: #ff6761;
+        --celeste-claro: #b4d2db;
+        --celeste-claro-01: #dae6ff;
+        --celeste-gris-oscuro: #70888f;
+        --celeste-gris-oscuro-01: #646a6b;
+        --celeste-gris-oscuro-02: #34393a;
+    }
+
+    @font-face{
+			font-family: constantia;
+			src: url('constantia.otf') format(truetype);
+		}
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: var(--celeste-claro);
+    }
+
+    /* primer cuadrante */
+
+    .left{
+        position: relative;
+        padding: 2em 0 2em 5em;
+    }
+
+    .profile-picture-C1 > img{
+        position: absolute;
+        top: 4em;
+        left: 10em;
+        width: 19em;
+        border-radius: 50%;
+        box-shadow: 10px 7px 0 rgb(100, 106, 107, .3);
+        background-color: white;
+        z-index: 200;
+    }
+
+    .text-content{
+        position: absolute;
+        right: 0em;
+        background-color: var(--rojo);
+        height: 30em;
+        width: 28em;
+        padding: 3em 0;
+        padding-left: 8em;
+        color: var(--blanco);
+        z-index: 100;
+    }
+
+    .text-content > h3{
+        font-size: 2.3em;
+    }
+
+    .text-content > h2{
+        font-size: 1.8em;
+    }
+
+    .text-content > img{
+        position: absolute;
+        width: 80%;
+        bottom: 3em;
+        left: 3.5em;
+        box-shadow: 10px 10px 0 var(--celeste-gris-oscuro-01);
+    }
+
+    .left > span{
+        position: absolute;
+        z-index: 0;
+        top: 20em;
+        right: 19em;
+        width: 23em;
+        height: 15em;
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    /* tercer cuadrante */
+
+    .text-description-C3{
+        position: relative;
+        margin-top: 32em;
+    }
+
+    .text-description-C3, .text-description-C2{
+        width: 100%;
+        padding: 1em 3em;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, .2);
+        background-color: var(--celeste-claro-01);
+    } 
+
+    .text-description-C3 > p, .text-description-C2 > p{
+        font-size: 1.7em;
+        color: var(--celeste-gris-oscuro);
+        font-weight: bold;
+    }
+
+    /* derecha */
+
+    .right{
+        padding: 2em 4em 2em 2em;
+    }
+
+    .img-C4{
+        position: relative;
+        margin-top: 4em;
+        background-color: var(--rojo);
+        width: 100%;
+        padding: 3.5em;
+    }
+
+    .img-C4 > img{
+        width: 35em;
+        box-shadow: 15px 20px 0 var(--celeste-gris-oscuro);
+    }
+
+    .img-C4 > h2{
+        position: absolute;
+        top: -.85em;
+        padding: 0 .15em;
+        font-size: 2.5em;
+        color: var(--rojo);
+        background-color: var(--blanco);
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, .1);
+    }
+
+    .img-C4 > h2 > span{
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+
+
+    @media only screen and (max-width: 600px){
+        section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+
+        .left, .right{
+            width: 100%;
+            padding: 0;
+            margin: 10px;
+        }
+
+        .profile-picture-C1 > img{
+            width: 14em;
+            top: 10px;
+            left: calc(50% - 7em);
+        }
+
+
+        .text-content{
+            width: 100%;
+        }
+
+
+        .text-description-C3, .text-description-C2{
+            width: 100%;
+            padding: 0;
+        }
+
+        .text-description-C3{
+            margin-top: 340px;
+
+        }
+
+        .img-C4{
+            padding: 1em;
+        }
+
+
+        .img-C4 > img{
+            width: 100%;
+        }
+
+        .text-content{
+            padding: 15em 0 0;
+            height: 21em;
+        }
+
+        .text-content > h2, .text-content > h3 {
+            text-align: center;
+        }
+
+        .text-content > img{
+            display: none;
+        }
+
+        .left > span{
+            display: none;
+        }
+
+        .text-description-C3{
+            margin-top: 23em;
+        }
+
+
+        .text-description-C3 > p, .text-description-C2 > p{
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .right{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            gap: 20px;
+        }
+
+        .img-C4{
+            margin-top: 1em;
+        }
+
+
+        .img-C4 > img{
+            width: 100%;
+            height: 17em;
+            object-fit: cover;
+            box-shadow: 10px 10px 0 var(--celeste-gris-oscuro);
+        }
+
+        .img-C4 > h2{
+            position: absolute;
+            top: -.85em;
+            padding: 0 .15em;
+            font-size: 1.2em;
+            color: var(--rojo);
+            background-color: var(--blanco);
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, .1);
+        }
+
+        .img-C4 > h2 > span{
+            text-transform: uppercase;
+            font-size: 1.1em;
+        }
+
+    }
+    
+
+
+
+</style>

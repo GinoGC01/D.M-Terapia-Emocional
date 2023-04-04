@@ -1,0 +1,17 @@
+{
+	"name": "terapia-emocional",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"astro": "^2.1.9",
+		"gh-pages": "^5.0.0"
+	}
+}

@@ -1,0 +1,193 @@
+---
+
+---
+<section id="main">
+    <main>
+        <div class="information__container">
+            <h1>Terapia Emocional</h1>
+            <p>
+                La Terapia emocional es un enfoque <br>
+                terapéutico que se centra en  <br>
+            <span>explorar y comprender las emociones</span>
+            </p>
+            <div class="buttons">
+                <button class="button">
+                    <a href="#about">Saber mas 
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                    </a>
+                </button>
+    
+                <button class="button">
+                    <a href="#contacto">Agendar Turno</a>
+                </button>
+            </div>
+        </div>
+        <div class="img-hero">
+            <img src="/public/images/img hero - max resolution.png" alt="image-hero">
+        </div>
+    </main>
+</section>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: constantia, 'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+    }
+
+    @font-face{
+		font-family: constantia;
+		src: url('constantia.otf') format(truetype);
+	}
+
+    :root{
+        --blanco: #f5f8fe;
+        --celeste: #00a9d9;
+        --rojo: #ff6761;
+        --celeste-claro: #b4d2db;
+        --celeste-claro-01: #dae6ff;
+        --celeste-gris-oscuro: #70888f;
+        --celeste-gris-oscuro-01: #646a6b;
+    }
+
+    main{
+        width: 100%;
+        height: calc(100vh - 110px);
+        margin: auto;
+        display: flex;
+        background-image: url('/public/images/background.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        justify-content: space-between;
+    }
+
+    .information__container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.7em;
+        width: auto;
+        padding:15em 0 0 6em;
+        z-index: 100;
+    }
+
+    .information__container > h1{
+        font-size: 5em;
+        color: var(--rojo);
+        text-shadow: 4px 4px 0 rgb(138, 28, 24, .2);
+    }
+
+    .information__container > p{
+        font-size: 1.5em;
+        color: var(--celeste-gris-oscuro);
+        line-height: 120%;
+        margin-left: .5em;
+    }
+
+    .information__container > p > span{
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .buttons{
+        margin-top: 1.5em;
+        display: flex;
+        gap: 3em;
+    }
+
+    .button{
+        border: none;
+        background-color: transparent;
+    }
+
+    .button > a{
+        padding: .4em 2em;
+        background-color: var(--celeste-claro-01);
+        color: var(--celeste-gris-oscuro-01);
+        font-size: 1.8em;
+        font-weight: 600;
+        border-radius: 7px;
+        box-shadow: 6px 6px 0 rgb(0, 0, 0, .2);
+        transition: background-color ease-in-out .2s, color ease-in-out .2s, box-shadow ease-in-out .2s;
+    }
+
+    .button > a:hover{
+        background-color: var(--celeste);
+        color: var(--blanco);
+        box-shadow: 6px 6px 5px rgb(0, 0, 0, .2);
+    }
+
+    .button > a > span{
+        transform: translateY(6px);
+        transition: transform ease-in-out .3s, color ease-in-out .5s;
+
+    }
+
+    .button > a:hover > span{
+        transform: translateY(15px);
+        color: transparent;
+    }
+
+    .img-hero{
+        position: absolute;
+        width: auto;
+        right: 0;
+        bottom: 10em;
+        padding: 1em 6em 0 0;
+    }
+
+    .img-hero > img{
+        width: 49em;
+        height: 40em;
+        filter: drop-shadow(20px 20px 0 rgba(0,0,0,.1));
+    }
+
+    @media only screen and (max-width: 600px){
+        main{
+            height: 100vh;
+            display: block;
+        }
+
+        .information__container{
+            position: relative;
+            padding: 5em 1em;
+            gap: 2em;
+        }
+
+        .img-hero{
+            display: none;
+        }
+
+        .information__container > h1{
+            font-size: 4em;
+        }
+
+        .information__container > p{
+            font-size: 1.25em;
+        }
+
+        .buttons{
+            margin-top: 0em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3em;
+        }
+
+        .button > a{
+            padding: .5em 1.5em;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+
+
+    }
+
+
+</style>
+

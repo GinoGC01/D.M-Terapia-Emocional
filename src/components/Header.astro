@@ -1,0 +1,233 @@
+---
+export interface props{
+    home:string;
+    about:string;
+    contacto:string;
+}
+
+const { home, about, contacto } = Astro.props
+---
+
+<header>
+    <img src="/public/images/Logo.png" alt="Daniela-Montali-Logo" class="logo-desktop">
+    <img src="/public/images/Terapia-Emocional-logo.png" alt="Daniela-Montali-Logo-Mobile" class="logo-mobile">
+    <span class="material-symbols-outlined menu-hamb">menu</span>
+    <nav class="nav">
+        <span class="material-symbols-outlined close">close</span>
+        <ul class="ul">
+            <li class="li">
+                <a href={home} class="href">
+                    <span class="material-symbols-outlined">home</span>
+                    Home
+                </a>
+            </li>
+            <li class="li">
+                <a href={about} class="href">
+                    <span class="material-symbols-outlined">label</span>
+                    About
+                </a>
+            </li>
+            <li class="li">
+                <a href={contacto} class="href-contact href">
+                    <span class="material-symbols-outlined">mail</span>
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const menuHamb = document.querySelector('.menu-hamb');
+    const navMobile = document.querySelector('.nav');
+    const close = document.querySelector('.close');
+    const listaUl = document.querySelector('.ul');
+
+    menuHamb.addEventListener('click', ()=>{
+        navMobile.classList.toggle('show');
+        menuHamb.classList.toggle('active');
+        listaUl.classList.toggle('ul-active');
+
+    })
+
+    close.addEventListener('click', ()=>{
+        navMobile.classList.toggle('show');
+        menuHamb.classList.toggle('active');
+        listaUl.classList.toggle('ul-active');
+
+    })
+</script>
+
+<style>
+    
+    @font-face{
+		font-family: constantia;
+		src: url('constantia.otf') format(truetype);
+	}
+
+    :root{
+        --blanco: #f5f8fe;
+        --celeste: #00a9d9;
+        --rojo: #ff6761;
+        --celeste-claro: #b4d2db;
+        --celeste-claro-01: #dae6ff;
+        --celeste-gris-oscuro: #70888f;
+        --celeste-gris-oscuro-01: #646a6b;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: constantia,'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        padding: 1.5em 5em;
+        margin: auto;
+        border-bottom: 1px solid var(--celeste-claro);
+    }
+
+    .menu-hamb{
+        display: none;
+    }
+
+    .logo-mobile{
+        display: none;
+    }
+
+    .close{
+        display: none;
+    }
+
+    .ul{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .li{
+        width: 6em;
+    }
+
+    .href{
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        color: var(--celeste);
+        font-size: 25px;
+        font-weight: 300;
+        transition: font-size ease-in-out .1s, opacity ease-in-out .2s;
+    }
+
+    .href:hover{
+        font-size: 26px;
+        opacity: .8;
+    }
+
+    .href-contact{
+        color: var(--rojo);
+        font-weight: 600;
+    }
+
+    .href > span{
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px){
+
+        header{
+            position: relative;
+            z-index: 400;
+            padding: 1.5em 1em;
+            width: 100%;
+            margin: auto;
+            background-color: var(--blanco);
+        }
+
+        .logo-desktop{
+            display: none;
+        }
+
+        .logo-mobile{
+            display: block;
+            width: 5em;
+        }
+
+        .menu-hamb{
+            display: block;
+            height: 1em;
+            width: 1em;
+            font-size: 2.7em;
+            transition: font-size ease-in .2s ;
+        }
+        
+        .active{
+            font-size: 2em;
+        }
+
+        .close{
+            display: block;
+            font-size: 2em;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+        }
+
+        .nav{
+            background-color: var(--celeste-claro-01);
+            position: absolute;
+            overflow: hidden;
+            width: 0px;
+            top: 120px;
+            left: -0px;
+            transition: width ease-in-out .3s;
+        }
+
+        .show{
+            position: absolute;
+            display: block;
+            width: 20em;
+            height: 100vh;  
+        }
+
+        .ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 95%;
+            height: 0;
+            overflow: hidden;
+            margin: 60px auto ;
+            padding: 0px 30px;
+            border-top: 2px solid var(--celeste-gris-oscuro);
+            background-color: var(--celeste-claro);
+            transition: padding ease-in .2s, height ease-in .2s;
+        }
+
+        .ul-active{
+            padding: 30px;
+            height: 100vh;
+        }
+
+        .href {
+            font-size: 1.3em;
+        }
+
+        .href-contact{
+            color: var(--celeste);
+            font-weight: 600;
+        }
+        .href > span{
+            display: block;
+        }
+
+    }
+
+</style>

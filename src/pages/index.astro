@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Main from '../components/Main.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="D.M - Terapia Emocional">
+
+    <Header home="#main" about="#about" contacto="#contacto"/>
+    <Main/>
+    <About/>
+    <Contact/>
+    <Footer/>
+	
+</Layout>
+
+<style>
+	*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+        scroll-behavior: smooth;
+    }
+
+</style>
