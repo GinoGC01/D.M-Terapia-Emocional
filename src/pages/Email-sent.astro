@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+<Layout title="¡Email Enviado!">
+    <div class="principal-container">
+        <div class="title">
+            <a href="/D.M-Terapia-Emocional/">
+                <span class="material-symbols-outlined back">arrow_back</span>
+            </a>
+                <h1>¡Su consulta se envió con éxito!</h1>
+                <span class="material-symbols-outlined span">check_circle</span>
+        </div>
+        <div class="prueba"> </div>
+       
+    </div>
+</Layout>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: constantia,'Josefin Sans', sans-serif;
+		text-decoration: none;
+		list-style: none;
+    }
+
+    :root{
+        --blanco: #f5f8fe;
+        --blanco02: #f5f8fe93;
+        --celeste: #00a9d9;
+        --rojo:#ff6761;
+        --rojo-01: #ad2d28;
+        --rojo-02: #811410;
+        --rojo-03: #c4413c;
+        --celeste-claro: #b4d2db;
+        --celeste-claro-01: #dae6ff;
+        --celeste-gris-oscuro: #70888f;
+        --celeste-gris-oscuro-01: #646a6b;
+        --celeste-gris-oscuro-02: #34393a;
+    }
+
+    .principal-container{
+        position: relative;
+        height: 100vh;
+        background-image: url('/public/images/back-form.png');
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+    }
+
+    .prueba{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background-image: url('/public/images/mail-sent.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .material-symbols-outlined{
+        font-size: 3.5em;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+
+    .span{
+        color: rgb(6, 180, 6);
+        
+    }
+
+    h1{
+        display: inline;
+        text-align: center;
+        font-size: 3em;
+        color: var(--celeste-gris-oscuro);
+    }
+
+    .title{
+        padding: 1.5em;
+    }
+
+
+    a{
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        display: block;
+        width: 5em;
+        height: 5em;
+        padding: 1em;
+        cursor: pointer;
+        transition:background-color ease-in .2s;
+        background-color: var(--rojo);
+        border-radius: 50%;
+        box-shadow: 4px 2px 0 rgba(0, 0, 0, .2);
+        transition:background-color ease-in-out .2s, box-shadow ease-in-out .2s, padding ease-in-out .2s ;
+    }
+
+    .back{
+        color: var(--blanco);
+        font-size: 3em;
+        transition:transform ease-in .2s, font-size ease-in-out .2s, text-shadow ease-in-out .2s;
+    }
+
+    a:hover{
+        background-color: var(--rojo-01);
+        box-shadow: 6px 2px 5px rgba(0, 0, 0, .2);
+        padding: .85em;
+    }
+
+
+    a:hover > .back{
+        font-size: 3.3em;
+        transform: translateX(-15px);
+        text-shadow: 15px 0px 2px rgba(0, 0, 0, .2);
+    }
+    
+    @media only screen and (max-width: 900px){
+
+        .title{
+            gap: 5px;
+        }
+
+        h1{
+            font-size: 1.4em;
+        }
+
+        .material-symbols-outlined{
+            font-size: 1.5em;
+        }
+
+        a{
+            width: 3em;
+            height: 3em;
+            padding: 0.2em;
+            top: 7em;
+        }
+
+        .back{
+            font-size: 2.5em;
+        }
+    }
+
+
+    @media only screen and (max-width: 375px){
+
+        h1{
+            font-size: 1em;
+        }
+    }
+
+
+</style>

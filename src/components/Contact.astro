@@ -35,24 +35,27 @@
                 <h2 class="cta-form">Envíame tu consulta</h2>
                 <img src="images/img default.jpg" alt="">
             </div>
-            <form>
+            <form action="https://formsubmit.co/7480fb51785f672b2b103d377de5b3ba" method="POST" >
+
+                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+                
                 <div class="input">
                     <input type="text" name="name" id="name" required placeholder=" ">
-                    <label for="name">Nombre</label>
+                    <label for="name" class="label">Nombre</label>
                 </div>
                 
                 <div class="input">
                     <input type="email" name="email" id="email" required placeholder=" ">
-                    <label for="email">Email</label>
+                    <label for="email" class="label">Email</label>
                 </div>
             
                 <div class="input">
                     <input type="number" name="phoneNumber" id="phoneNumber" required placeholder=" ">
-                    <label for="phoneNumber">Número de teléfono</label>
+                    <label for="phoneNumber" class="label">Número de teléfono</label>
                 </div>
                 <div class="input text-area">
                     <textarea name="context" id="context" cols="15" rows="5" placeholder=" " required></textarea>
-                    <label for="context">Contame un poco sobre la consulta</label>
+                    <label for="context" class="label label-text-area">Contame un poco sobre la consulta</label>
                 </div>
                 
                 <button type="submit">Enviar</button>
@@ -87,15 +90,15 @@
     }
     .contact__container{
         display: grid;
-        grid-template-columns: 30% 1fr;
-        padding: 2em 4em 2em 5em;
+        grid-template-columns: 25% 1fr;
+        padding: 1em;
         background-image: url('/public/images/back-form.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .redes-sociales{
-        margin: 5em 0 0 3em;
+        margin: 5em 0 0 1em;
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -107,8 +110,6 @@
         gap: 1em;
         width: 3em;
     }
-
-    
 
     a > i{
         font-size: 2.8em;
@@ -145,7 +146,8 @@
         display: flex;
         gap: 2em;
         width: 100%;
-        padding: 2em 3em 2em 6em;
+        /* padding: 2em 3em 2em 6em; */
+        padding: 1em;
         background-color: var(--rojo);
         background-image: url('/public/images/Background-form.png');
         background-repeat: no-repeat;
@@ -227,9 +229,9 @@
         
     }
 
-    label{
+    .label{
         position: absolute;
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-weight: bold;
         left: 15px;
         top: 0;
@@ -239,15 +241,19 @@
         transition: color ease-in .2s, transform ease-in .2s;
     }
 
-    label::after{
+    .label-text-area{
+            font-size: 1em;
+        }
+
+    .label::after{
         content: "*";
         color: var(--blanco02);
     }
 
-    input:focus + label,
-    input:not(:placeholder-shown) + label,
-    textarea:focus + label,
-    textarea:not(:placeholder-shown) + label{
+    input:focus + .label,
+    input:not(:placeholder-shown) + .label,
+    textarea:focus + .label,
+    textarea:not(:placeholder-shown) + .label{
 
         transform: translateY(-22px) scale(.75);
         transform-origin: left top;
@@ -273,7 +279,7 @@
         background-color: var(--celeste-gris-oscuro-01);
     }
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 800px){
         .contact__container{
             display: flex;
             flex-wrap: wrap-reverse;
@@ -314,6 +320,7 @@
             box-shadow: none;
         }
 
+        
     }
 
 
